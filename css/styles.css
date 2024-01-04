@@ -4,6 +4,22 @@ body {
   background-color: #fff;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   text-decoration: none;
 }
@@ -11,6 +27,27 @@ a {
 ul,
 ol {
   list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+.container {
+  width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -21,10 +58,20 @@ ol {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-right: 76px;
 }
 
 .logo-name {
   color: #2e2f42;
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
+.address-list {
+  display: flex;
+  gap: 40px;
 }
 
 .menu-link {
@@ -32,6 +79,8 @@ ol {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding: 24px 0;
+  display: block;
 }
 
 .menu-link:hover,
@@ -41,6 +90,7 @@ ol {
 
 .address {
   font-style: normal;
+  margin-left: auto;
 }
 
 .contacts {
@@ -56,17 +106,29 @@ ol {
 }
 
 .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
   white-space: nowrap;
   clip-path: inset(100%);
+  clip: rect(0 0 0 0);
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
 }
 
 /*Section hero */
 .hero {
   background-color: #2e2f42;
+  padding: 188px 0;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
 }
 
 .hero-title {
@@ -76,9 +138,11 @@ ol {
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 0.02em;
+  max-width: 496px;
 }
 
 .hero-order-btn {
+  padding: 16px 32px;
   color: #fff;
   font-family: inherit;
   font-size: 16px;
@@ -87,6 +151,9 @@ ol {
   letter-spacing: 0.04em;
   background: #4d5ae5;
   cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border: none;
 }
 
 .hero-order-btn:hover,
@@ -96,7 +163,20 @@ ol {
 
 /*  Section feature  */
 
+.about-feature {
+  padding: 120px 0;
+}
+
+.feature-list {
+  display: flex;
+  gap: 24px;
+}
+.feature-items {
+  width: calc((100% - 24px * 3) / 4);
+}
+
 .feature-title {
+  padding-bottom: 8px;
   color: #2e2f42;
   font-size: 20px;
   font-weight: 500;
@@ -114,6 +194,7 @@ ol {
 
 .team {
   background-color: #f4f4fd;
+  padding: 120px 0;
 }
 
 .team-tittle {
@@ -124,6 +205,12 @@ ol {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin: 0 auto 72px;
+}
+
+.team-list {
+  display: flex;
+  gap: 24px;
 }
 
 .team-name {
@@ -133,11 +220,21 @@ ol {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  padding-bottom: 8px;
 }
 .team-menu {
+  width: calc((100% - 72px) / 4);
   background-color: #fff;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  border-top: none;
 }
 
+.team-info {
+  padding: 32px 0;
+}
 .team-text {
   color: #434455;
   text-align: center;
@@ -146,6 +243,10 @@ ol {
 }
 
 /* Section Our Portfolio  */
+
+.portfolio {
+  padding: 120px 0;
+}
 .portfolio-title {
   color: #2e2f42;
   text-align: center;
@@ -154,6 +255,25 @@ ol {
   line-height: 1.1;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+
+.portfolio-menu {
+  width: calc((100% - 48px) / 3);
+}
+
+.portfolio-info {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  background: #fff;
+  border-top: none;
 }
 
 .portfolio-name {
@@ -162,6 +282,7 @@ ol {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  padding-bottom: 8px;
 }
 
 .portfolio-name-text {
@@ -173,14 +294,18 @@ ol {
 /*    footer    */
 .footer {
   background-color: #2e2f42;
+  padding: 100px 0 100px;
 }
 
 .logo-names {
   color: #f4f4fd;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .footer-text {
   color: #f4f4fd;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  max-width: 264px;
 }
